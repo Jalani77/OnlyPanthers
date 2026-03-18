@@ -1,0 +1,236 @@
+import { Professor } from '../types';
+
+export const mockProfessors: Professor[] = [
+  {
+    id: 'p1', name: 'Dr. Marcus Webb', department: 'Business',
+    courses: ['BUSA 3000', 'BUSA 4200 - Business Analytics', 'BUSA 4800'],
+    overallRating: 4.6, wouldTakeAgain: 88, difficulty: 'Medium', avgGPA: 3.2,
+    curveLikelihood: 4, examVsProjectRatio: 35, attendanceStrictness: 2,
+    tags: ['Curved Grades', 'Easy A', 'Fast Feedback', 'Clear Grading'],
+    gradeDistribution: { A: 42, B: 31, C: 18, D: 6, F: 3 },
+    reviews: [
+      { id: 'r1', professorId: 'p1', semester: 'Fall 2025', anonymousName: 'Student A', overallRating: 5, difficultyRating: 3, lectureQualityRating: 5, helpfulnessRating: 5, gradeReceived: 'A', wasCurved: 'Yes', attendanceRequired: false, tags: ['Curved Grades', 'Easy A'], comment: "Dr. Webb is genuinely one of the best professors I've had at GSU. He curves every exam and explains exactly what to study. Office hours are incredibly helpful and he responds to emails fast.", helpfulCount: 47 },
+      { id: 'r2', professorId: 'p1', semester: 'Spring 2025', anonymousName: 'Student B', overallRating: 4, difficultyRating: 2, lectureQualityRating: 4, helpfulnessRating: 4, gradeReceived: 'B', wasCurved: 'Somewhat', attendanceRequired: false, tags: ['Fast Feedback', 'Clear Grading'], comment: "Great professor. He knows his stuff and doesn't waste your time. Tests are straightforward if you pay attention in class.", helpfulCount: 32 },
+    ],
+  },
+  {
+    id: 'p2', name: 'Prof. Anita Sharma', department: 'CS',
+    courses: ['CSC 1301 - Intro to CS', 'CSC 2310', 'CSC 3210'],
+    overallRating: 3.8, wouldTakeAgain: 61, difficulty: 'Hard', avgGPA: 2.7,
+    curveLikelihood: 2, examVsProjectRatio: 70, attendanceStrictness: 5,
+    tags: ['Heavy Tests', 'Attendance Required', 'Hard Grader'],
+    gradeDistribution: { A: 18, B: 27, C: 32, D: 15, F: 8 },
+    reviews: [
+      { id: 'r3', professorId: 'p2', semester: 'Fall 2025', anonymousName: 'Student C', overallRating: 3, difficultyRating: 5, lectureQualityRating: 4, helpfulnessRating: 3, gradeReceived: 'C', wasCurved: 'No', attendanceRequired: true, tags: ['Heavy Tests', 'Attendance Required'], comment: "Prof. Sharma knows her material really well but her exams are brutal. She doesn't curve and attendance counts for 20% of your grade.", helpfulCount: 28 },
+    ],
+  },
+  {
+    id: 'p3', name: 'Dr. Kevin Torres', department: 'Business',
+    courses: ['MKTG 3100 - Marketing Principles', 'MKTG 4500', 'MKTG 4700 - Digital Marketing'],
+    overallRating: 4.9, wouldTakeAgain: 95, difficulty: 'Medium', avgGPA: 3.5,
+    curveLikelihood: 3, examVsProjectRatio: 60, attendanceStrictness: 2,
+    tags: ['Inspirational', 'Group Projects', 'Extra Credit Available'],
+    gradeDistribution: { A: 55, B: 30, C: 10, D: 3, F: 2 },
+    reviews: [
+      { id: 'r4', professorId: 'p3', semester: 'Spring 2025', anonymousName: 'Student D', overallRating: 5, difficultyRating: 3, lectureQualityRating: 5, helpfulnessRating: 5, gradeReceived: 'A', wasCurved: 'Somewhat', attendanceRequired: false, tags: ['Inspirational', 'Group Projects'], comment: "Dr. Torres is the kind of professor who makes you want to come to class. His real-world marketing stories are incredible. The group project is a lot of work but absolutely worth it.", helpfulCount: 89 },
+    ],
+  },
+  {
+    id: 'p4', name: 'Dr. Priscilla Nguyen', department: 'Psychology',
+    courses: ['PSYC 1101 - Intro to Psychology', 'PSYC 3250', 'PSYC 4400 - Social Psychology'],
+    overallRating: 4.3, wouldTakeAgain: 78, difficulty: 'Easy', avgGPA: 3.4,
+    curveLikelihood: 3, examVsProjectRatio: 40, attendanceStrictness: 3,
+    tags: ['Easy A', 'Clear Grading', 'Office Hours Helpful'],
+    gradeDistribution: { A: 48, B: 33, C: 13, D: 4, F: 2 },
+    reviews: [
+      { id: 'r5', professorId: 'p4', semester: 'Fall 2025', anonymousName: 'Student E', overallRating: 4, difficultyRating: 2, lectureQualityRating: 4, helpfulnessRating: 5, gradeReceived: 'A', wasCurved: 'No', attendanceRequired: false, tags: ['Easy A', 'Clear Grading'], comment: "Really approachable professor. Her slides are well-organized and the exams match exactly what she emphasizes in class.", helpfulCount: 41 },
+    ],
+  },
+  {
+    id: 'p5', name: 'Prof. Daniel Okafor', department: 'Math',
+    courses: ['MATH 1111 - College Algebra', 'MATH 2211 - Calculus I', 'MATH 2212'],
+    overallRating: 3.4, wouldTakeAgain: 52, difficulty: 'Hard', avgGPA: 2.5,
+    curveLikelihood: 2, examVsProjectRatio: 90, attendanceStrictness: 4,
+    tags: ['Heavy Tests', 'Reads Off Slides', 'Attendance Required'],
+    gradeDistribution: { A: 15, B: 23, C: 30, D: 20, F: 12 },
+    reviews: [
+      { id: 'r6', professorId: 'p5', semester: 'Spring 2025', anonymousName: 'Student F', overallRating: 3, difficultyRating: 5, lectureQualityRating: 2, helpfulnessRating: 2, gradeReceived: 'C', wasCurved: 'No', attendanceRequired: true, tags: ['Heavy Tests', 'Reads Off Slides'], comment: "Prof. Okafor really knows calculus but his lectures are mostly just reading the textbook out loud. Go to office hours — it's the only way to survive.", helpfulCount: 19 },
+    ],
+  },
+  {
+    id: 'p6', name: 'Dr. Simone Watkins', department: 'English',
+    courses: ['ENGL 1101 - Composition I', 'ENGL 1102', 'ENGL 3350 - American Literature'],
+    overallRating: 4.7, wouldTakeAgain: 90, difficulty: 'Easy', avgGPA: 3.6,
+    curveLikelihood: 2, examVsProjectRatio: 20, attendanceStrictness: 3,
+    tags: ['Inspirational', 'Clear Grading', 'Fast Feedback'],
+    gradeDistribution: { A: 58, B: 28, C: 10, D: 3, F: 1 },
+    reviews: [
+      { id: 'r7', professorId: 'p6', semester: 'Fall 2025', anonymousName: 'Student G', overallRating: 5, difficultyRating: 2, lectureQualityRating: 5, helpfulnessRating: 5, gradeReceived: 'A', wasCurved: 'No', attendanceRequired: true, tags: ['Inspirational', 'Fast Feedback'], comment: "Dr. Watkins turned me into someone who actually enjoys writing. Her feedback on essays is detailed, kind, and constructive.", helpfulCount: 65 },
+    ],
+  },
+  {
+    id: 'p7', name: 'Dr. James Hartfield', department: 'Biology',
+    courses: ['BIOL 1107 - Principles of Biology I', 'BIOL 2108', 'BIOL 3400 - Genetics'],
+    overallRating: 3.9, wouldTakeAgain: 67, difficulty: 'Hard', avgGPA: 2.8,
+    curveLikelihood: 3, examVsProjectRatio: 75, attendanceStrictness: 3,
+    tags: ['Heavy Tests', 'Curved Grades', 'Office Hours Helpful'],
+    gradeDistribution: { A: 22, B: 30, C: 28, D: 12, F: 8 },
+    reviews: [
+      { id: 'r8', professorId: 'p7', semester: 'Fall 2025', anonymousName: 'Student H', overallRating: 4, difficultyRating: 4, lectureQualityRating: 4, helpfulnessRating: 4, gradeReceived: 'B', wasCurved: 'Yes', attendanceRequired: false, tags: ['Heavy Tests', 'Curved Grades'], comment: "Biology is inherently tough but Dr. Hartfield is a great guide through it. He curves the midterms which saves most students.", helpfulCount: 33 },
+    ],
+  },
+  {
+    id: 'p8', name: 'Prof. Tanya Bridges', department: 'Communications',
+    courses: ['COMM 1100 - Public Speaking', 'COMM 2500', 'COMM 4100 - Media Studies'],
+    overallRating: 4.4, wouldTakeAgain: 81, difficulty: 'Easy', avgGPA: 3.5,
+    curveLikelihood: 2, examVsProjectRatio: 15, attendanceStrictness: 4,
+    tags: ['Group Projects', 'Inspirational', 'Attendance Required'],
+    gradeDistribution: { A: 50, B: 32, C: 12, D: 4, F: 2 },
+    reviews: [
+      { id: 'r9', professorId: 'p8', semester: 'Spring 2025', anonymousName: 'Student I', overallRating: 4, difficultyRating: 2, lectureQualityRating: 5, helpfulnessRating: 4, gradeReceived: 'A', wasCurved: 'No', attendanceRequired: true, tags: ['Group Projects', 'Inspirational'], comment: "Tanya makes public speaking actually fun. The group media project at the end is a real portfolio piece.", helpfulCount: 44 },
+    ],
+  },
+  {
+    id: 'p9', name: 'Dr. Raymond Castillo', department: 'Political Science',
+    courses: ['POLS 1101 - American Government', 'POLS 3300', 'POLS 4200 - International Relations'],
+    overallRating: 4.1, wouldTakeAgain: 72, difficulty: 'Medium', avgGPA: 3.1,
+    curveLikelihood: 3, examVsProjectRatio: 50, attendanceStrictness: 2,
+    tags: ['Inspirational', 'Heavy Tests', 'Clear Grading'],
+    gradeDistribution: { A: 35, B: 38, C: 18, D: 6, F: 3 },
+    reviews: [
+      { id: 'r10', professorId: 'p9', semester: 'Fall 2025', anonymousName: 'Student J', overallRating: 4, difficultyRating: 3, lectureQualityRating: 5, helpfulnessRating: 3, gradeReceived: 'B', wasCurved: 'Somewhat', attendanceRequired: false, tags: ['Inspirational', 'Clear Grading'], comment: "Dr. Castillo is incredibly knowledgeable. His lectures on international relations are some of the best I've attended. Tests are essay-based so study your frameworks.", helpfulCount: 28 },
+    ],
+  },
+  {
+    id: 'p10', name: 'Prof. Leila Osman', department: 'Art',
+    courses: ['ART 1010 - Drawing I', 'ART 2300 - Digital Design', 'ART 3500 - Portfolio Development'],
+    overallRating: 4.8, wouldTakeAgain: 93, difficulty: 'Easy', avgGPA: 3.7,
+    curveLikelihood: 1, examVsProjectRatio: 5, attendanceStrictness: 3,
+    tags: ['Inspirational', 'Extra Credit Available', 'Clear Grading'],
+    gradeDistribution: { A: 65, B: 25, C: 7, D: 2, F: 1 },
+    reviews: [
+      { id: 'r11', professorId: 'p10', semester: 'Spring 2025', anonymousName: 'Student K', overallRating: 5, difficultyRating: 1, lectureQualityRating: 5, helpfulnessRating: 5, gradeReceived: 'A', wasCurved: 'No', attendanceRequired: false, tags: ['Inspirational', 'Extra Credit Available'], comment: "Prof. Osman is an incredible artist and an even better teacher. The portfolio course transformed my work completely. Best professor at GSU, no contest.", helpfulCount: 73 },
+    ],
+  },
+  {
+    id: 'p11', name: 'Dr. Frederick Lane', department: 'Business',
+    courses: ['FI 3300 - Financial Management', 'FI 4400 - Investments', 'FI 4800 - Advanced Valuation'],
+    overallRating: 4.2, wouldTakeAgain: 75, difficulty: 'Hard', avgGPA: 3.0,
+    curveLikelihood: 3, examVsProjectRatio: 65, attendanceStrictness: 2,
+    tags: ['Heavy Tests', 'Curved Grades', 'Fast Feedback'],
+    gradeDistribution: { A: 30, B: 35, C: 22, D: 8, F: 5 },
+    reviews: [
+      { id: 'r12', professorId: 'p11', semester: 'Fall 2025', anonymousName: 'Student L', overallRating: 4, difficultyRating: 4, lectureQualityRating: 4, helpfulnessRating: 4, gradeReceived: 'B', wasCurved: 'Yes', attendanceRequired: false, tags: ['Heavy Tests', 'Curved Grades'], comment: "Finance with Dr. Lane is no joke — but he teaches it right. He curves when the class average is below 70. Real-world valuation examples make the models click.", helpfulCount: 37 },
+    ],
+  },
+  {
+    id: 'p12', name: 'Prof. Sandra Kim', department: 'CS',
+    courses: ['CSC 2720 - Data Structures', 'CSC 3320 - Systems Programming', 'CSC 4360 - Machine Learning'],
+    overallRating: 4.5, wouldTakeAgain: 84, difficulty: 'Hard', avgGPA: 3.0,
+    curveLikelihood: 2, examVsProjectRatio: 55, attendanceStrictness: 1,
+    tags: ['Office Hours Helpful', 'Clear Grading', 'Heavy Tests'],
+    gradeDistribution: { A: 30, B: 32, C: 25, D: 8, F: 5 },
+    reviews: [
+      { id: 'r13', professorId: 'p12', semester: 'Fall 2025', anonymousName: 'Student M', overallRating: 5, difficultyRating: 4, lectureQualityRating: 5, helpfulnessRating: 5, gradeReceived: 'A', wasCurved: 'No', attendanceRequired: false, tags: ['Office Hours Helpful', 'Clear Grading'], comment: "Prof. Kim is the reason I'm pursuing a career in ML. Her office hours are incredible — she walks you through problems step by step.", helpfulCount: 61 },
+    ],
+  },
+  {
+    id: 'p13', name: 'Dr. Alicia Monroe', department: 'Psychology',
+    courses: ['PSYC 3400 - Cognitive Psychology', 'PSYC 4600 - Behavioral Neuroscience'],
+    overallRating: 4.0, wouldTakeAgain: 70, difficulty: 'Medium', avgGPA: 3.1,
+    curveLikelihood: 3, examVsProjectRatio: 45, attendanceStrictness: 3,
+    tags: ['Group Projects', 'Clear Grading', 'Heavy Tests'],
+    gradeDistribution: { A: 32, B: 35, C: 22, D: 8, F: 3 },
+    reviews: [
+      { id: 'r14', professorId: 'p13', semester: 'Spring 2025', anonymousName: 'Student N', overallRating: 4, difficultyRating: 3, lectureQualityRating: 4, helpfulnessRating: 3, gradeReceived: 'B', wasCurved: 'Somewhat', attendanceRequired: true, tags: ['Group Projects', 'Clear Grading'], comment: "Decent professor for cognitive psych. The group research project is a big chunk of your grade so choose teammates wisely.", helpfulCount: 22 },
+    ],
+  },
+  {
+    id: 'p14', name: 'Prof. Brandon Hughes', department: 'Math',
+    courses: ['MATH 2420 - Discrete Math', 'MATH 3260 - Linear Algebra', 'MATH 4150 - Real Analysis'],
+    overallRating: 3.6, wouldTakeAgain: 58, difficulty: 'Hard', avgGPA: 2.6,
+    curveLikelihood: 2, examVsProjectRatio: 88, attendanceStrictness: 2,
+    tags: ['Heavy Tests', 'Hard Grader', 'Office Hours Helpful'],
+    gradeDistribution: { A: 18, B: 25, C: 30, D: 17, F: 10 },
+    reviews: [
+      { id: 'r15', professorId: 'p14', semester: 'Fall 2025', anonymousName: 'Student O', overallRating: 3, difficultyRating: 5, lectureQualityRating: 3, helpfulnessRating: 4, gradeReceived: 'C', wasCurved: 'No', attendanceRequired: false, tags: ['Heavy Tests', 'Hard Grader'], comment: "Real Analysis with Hughes is one of the hardest courses at GSU. He's brilliant but the jump to proof-based math is massive. Office hours are your lifeline.", helpfulCount: 15 },
+    ],
+  },
+  {
+    id: 'p15', name: 'Dr. Vanessa Price', department: 'English',
+    courses: ['ENGL 2110 - World Literature', 'ENGL 3200 - Creative Writing', 'ENGL 4100 - Modern Fiction'],
+    overallRating: 4.6, wouldTakeAgain: 87, difficulty: 'Easy', avgGPA: 3.6,
+    curveLikelihood: 2, examVsProjectRatio: 10, attendanceStrictness: 3,
+    tags: ['Inspirational', 'Clear Grading', 'Fast Feedback'],
+    gradeDistribution: { A: 55, B: 30, C: 12, D: 2, F: 1 },
+    reviews: [
+      { id: 'r16', professorId: 'p15', semester: 'Spring 2025', anonymousName: 'Student P', overallRating: 5, difficultyRating: 2, lectureQualityRating: 5, helpfulnessRating: 5, gradeReceived: 'A', wasCurved: 'No', attendanceRequired: true, tags: ['Inspirational', 'Fast Feedback'], comment: "Dr. Price's creative writing class is a transformative experience. She reads every piece carefully and her written comments are the most insightful I've received.", helpfulCount: 55 },
+    ],
+  },
+  {
+    id: 'p16', name: 'Prof. Omar Abdullah', department: 'CS',
+    courses: ['CSC 4520 - Design & Analysis of Algorithms', 'CSC 4700 - Software Engineering'],
+    overallRating: 4.2, wouldTakeAgain: 76, difficulty: 'Hard', avgGPA: 3.0,
+    curveLikelihood: 3, examVsProjectRatio: 60, attendanceStrictness: 1,
+    tags: ['Heavy Tests', 'Group Projects', 'Clear Grading'],
+    gradeDistribution: { A: 28, B: 34, C: 26, D: 8, F: 4 },
+    reviews: [
+      { id: 'r17', professorId: 'p16', semester: 'Fall 2025', anonymousName: 'Student Q', overallRating: 4, difficultyRating: 4, lectureQualityRating: 4, helpfulnessRating: 4, gradeReceived: 'B', wasCurved: 'Somewhat', attendanceRequired: false, tags: ['Heavy Tests', 'Group Projects'], comment: "Algorithms with Abdullah is challenging but fair. The software engineering group project looks great on a resume. He grades hard but tells you exactly what he wants.", helpfulCount: 39 },
+    ],
+  },
+  {
+    id: 'p17', name: 'Dr. Helena Park', department: 'Biology',
+    courses: ['BIOL 3510 - Microbiology', 'BIOL 4200 - Immunology', 'BIOL 4600 - Cell Biology'],
+    overallRating: 4.4, wouldTakeAgain: 80, difficulty: 'Medium', avgGPA: 3.2,
+    curveLikelihood: 4, examVsProjectRatio: 65, attendanceStrictness: 3,
+    tags: ['Curved Grades', 'Office Hours Helpful', 'Clear Grading'],
+    gradeDistribution: { A: 38, B: 32, C: 20, D: 7, F: 3 },
+    reviews: [
+      { id: 'r18', professorId: 'p17', semester: 'Spring 2025', anonymousName: 'Student R', overallRating: 4, difficultyRating: 3, lectureQualityRating: 4, helpfulnessRating: 5, gradeReceived: 'A', wasCurved: 'Yes', attendanceRequired: false, tags: ['Curved Grades', 'Office Hours Helpful'], comment: "Immunology with Dr. Park was genuinely fascinating. She curves based on class performance and her office hours are incredibly helpful. Highly recommended for pre-med students.", helpfulCount: 48 },
+    ],
+  },
+  {
+    id: 'p18', name: 'Prof. Carlos Rivera', department: 'Business',
+    courses: ['MGT 3100 - Management Principles', 'MGT 4200 - Strategic Management', 'MGT 4800 - Leadership'],
+    overallRating: 4.0, wouldTakeAgain: 69, difficulty: 'Medium', avgGPA: 3.1,
+    curveLikelihood: 2, examVsProjectRatio: 55, attendanceStrictness: 4,
+    tags: ['Attendance Required', 'Group Projects', 'Clear Grading'],
+    gradeDistribution: { A: 32, B: 36, C: 22, D: 7, F: 3 },
+    reviews: [
+      { id: 'r19', professorId: 'p18', semester: 'Fall 2025', anonymousName: 'Student S', overallRating: 4, difficultyRating: 3, lectureQualityRating: 4, helpfulnessRating: 3, gradeReceived: 'B', wasCurved: 'No', attendanceRequired: true, tags: ['Attendance Required', 'Group Projects'], comment: "Prof. Rivera runs his class like a real boardroom — attendance and participation count heavily. The strategic management case studies are excellent prep for consulting interviews.", helpfulCount: 31 },
+    ],
+  },
+  {
+    id: 'p19', name: 'Dr. Naomi Fletcher', department: 'Political Science',
+    courses: ['POLS 2200 - Comparative Politics', 'POLS 3800 - Public Policy', 'POLS 4500 - Political Economy'],
+    overallRating: 4.3, wouldTakeAgain: 77, difficulty: 'Medium', avgGPA: 3.2,
+    curveLikelihood: 2, examVsProjectRatio: 40, attendanceStrictness: 3,
+    tags: ['Inspirational', 'Heavy Tests', 'Group Projects'],
+    gradeDistribution: { A: 36, B: 38, C: 18, D: 5, F: 3 },
+    reviews: [
+      { id: 'r20', professorId: 'p19', semester: 'Spring 2025', anonymousName: 'Student T', overallRating: 4, difficultyRating: 3, lectureQualityRating: 5, helpfulnessRating: 4, gradeReceived: 'A', wasCurved: 'No', attendanceRequired: false, tags: ['Inspirational', 'Group Projects'], comment: "Dr. Fletcher brings public policy to life with Atlanta-specific case studies. The policy brief group project was actually fun to work on.", helpfulCount: 26 },
+    ],
+  },
+  {
+    id: 'p20', name: 'Prof. David Yeung', department: 'CS',
+    courses: ['CSC 3210 - Database Systems', 'CSC 4610 - Cloud Computing', 'CSC 4910 - Senior Capstone'],
+    overallRating: 4.6, wouldTakeAgain: 89, difficulty: 'Medium', avgGPA: 3.3,
+    curveLikelihood: 3, examVsProjectRatio: 70, attendanceStrictness: 2,
+    tags: ['Group Projects', 'Extra Credit Available', 'Fast Feedback'],
+    gradeDistribution: { A: 45, B: 33, C: 15, D: 5, F: 2 },
+    reviews: [
+      { id: 'r21', professorId: 'p20', semester: 'Fall 2025', anonymousName: 'Student U', overallRating: 5, difficultyRating: 3, lectureQualityRating: 5, helpfulnessRating: 5, gradeReceived: 'A', wasCurved: 'Somewhat', attendanceRequired: false, tags: ['Group Projects', 'Fast Feedback'], comment: "Prof. Yeung's cloud computing class is legitimately portfolio-worthy. We deployed a full AWS architecture as the final project. He gives detailed code review feedback within 48 hours.", helpfulCount: 58 },
+    ],
+  },
+  {
+    id: 'p21', name: 'Dr. Georgia Marsh', department: 'Communications',
+    courses: ['COMM 3100 - Journalism Fundamentals', 'COMM 4200 - Digital Media Production'],
+    overallRating: 4.5, wouldTakeAgain: 85, difficulty: 'Easy', avgGPA: 3.5,
+    curveLikelihood: 2, examVsProjectRatio: 20, attendanceStrictness: 4,
+    tags: ['Inspirational', 'Group Projects', 'Clear Grading'],
+    gradeDistribution: { A: 52, B: 30, C: 12, D: 4, F: 2 },
+    reviews: [
+      { id: 'r22', professorId: 'p21', semester: 'Spring 2025', anonymousName: 'Student V', overallRating: 5, difficultyRating: 2, lectureQualityRating: 5, helpfulnessRating: 4, gradeReceived: 'A', wasCurved: 'No', attendanceRequired: true, tags: ['Inspirational', 'Group Projects'], comment: "Digital Media Production with Dr. Marsh is the best class I've taken. We produced and published a full multimedia story arc. She pushes you to professional standards.", helpfulCount: 52 },
+    ],
+  },
+];
